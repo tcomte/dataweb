@@ -125,50 +125,67 @@
       <img src="./img/linkedata.PNG"/>
     </section>
 
-    <!-- End slides. -->
+    <section class="slide" style="text-align:center">
+      <h2 style="text-align:left">Qu'est-ce que RDF?</h2>
+      <div class="slide">
+        <h3>RDF : Ressource Description Framework</h3>
+        <p>Représentation des données sous forme de triplet</p>
+        <p>Sujet Prédicat Objet</p><br/>
+        <p>New-York Abrévation NY ==> NY est l'abrévation de New-York</p>
+      </div>
+      <div class="slide">
+        <p>New-York, abréviation...?</p>
+      </div>
+      <div class="slide">
+        <h3>URI : Uniform Resource Identifier</h3><br/>
+        <p>&lsaquo;urn:x-states:New%20York&rsaquo; &lsaquo;http://purl.org/dc/terms/alternative&rsaquo; "NY"</p>
+      </div>
+      </section>
 
-    <!-- Begin extension snippets. Add or remove as needed. -->
+      <!-- End slides. -->
 
-    <!-- deck.navigation snippet -->
-    <div aria-role="navigation">
-      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+      <!-- Begin extension snippets. Add or remove as needed. -->
+
+      <!-- deck.navigation snippet -->
+      <div aria-role="navigation">
+        <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+        <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+      </div>
+
+      <!-- deck.status snippet -->
+      <p class="deck-status" aria-role="status">
+        <span class="deck-status-current"></span>
+        /
+        <span class="deck-status-total"></span>
+      </p>
+
+      <!-- deck.goto snippet -->
+      <form action="." method="get" class="goto-form">
+        <label for="goto-slide">Go to slide:</label>
+        <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+        <datalist id="goto-datalist"></datalist>
+        <input type="submit" value="Go">
+      </form>
+
+      <!-- End extension snippets. -->
     </div>
 
-    <!-- deck.status snippet -->
-    <p class="deck-status" aria-role="status">
-      <span class="deck-status-current"></span>
-      /
-      <span class="deck-status-total"></span>
-    </p>
+    <!-- Required JS files. -->
+    <script src="jquery.min.js"></script>
+    <script src="core/deck.core.js"></script>
 
-    <!-- deck.goto snippet -->
-    <form action="." method="get" class="goto-form">
-      <label for="goto-slide">Go to slide:</label>
-      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-      <datalist id="goto-datalist"></datalist>
-      <input type="submit" value="Go">
-    </form>
+    <!-- Extension JS files. Add or remove as needed. -->
+    <script src="extensions/menu/deck.menu.js"></script>
+    <script src="extensions/goto/deck.goto.js"></script>
+    <script src="extensions/status/deck.status.js"></script>
+    <script src="extensions/navigation/deck.navigation.js"></script>
+    <script src="extensions/scale/deck.scale.js"></script>
 
-    <!-- End extension snippets. -->
-  </div>
-
-  <!-- Required JS files. -->
-  <script src="jquery.min.js"></script>
-  <script src="core/deck.core.js"></script>
-
-  <!-- Extension JS files. Add or remove as needed. -->
-  <script src="extensions/menu/deck.menu.js"></script>
-  <script src="extensions/goto/deck.goto.js"></script>
-  <script src="extensions/status/deck.status.js"></script>
-  <script src="extensions/navigation/deck.navigation.js"></script>
-  <script src="extensions/scale/deck.scale.js"></script>
-
-  <!-- Initialize the deck. You can put this in an external file if desired. -->
-  <script>
-  $(function() {
-    $.deck('.slide');
-  });
-  </script>
-</body>
-</html>
+    <!-- Initialize the deck. You can put this in an external file if desired. -->
+    <script>
+    $(function() {
+      $.deck('.slide');
+    });
+    </script>
+  </body>
+  </html>
