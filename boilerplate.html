@@ -140,52 +140,63 @@
         <h3>URI : Uniform Resource Identifier</h3><br/>
         <p>&lsaquo;urn:x-states:New%20York&rsaquo; &lsaquo;http://purl.org/dc/terms/alternative&rsaquo; "NY"</p>
       </div>
-      </section>
+    </section>
 
-      <!-- End slides. -->
+    <section class="slide">
+      <h2>Qu'est-ce que DBPedia?</h2>
+      <img src="./img/dbpedia.PNG"/>
+      <ul>
+        <li>Projet universitaire et communautaire</li>
+        <li>Extraction des données Wikipedia</li>
+        <li>Mise en forme de ces données sous RDF</li>
+        <li>Différentes versions en fonction des langues</li>
+      </ul>
+    </section>
 
-      <!-- Begin extension snippets. Add or remove as needed. -->
+    <!-- End slides. -->
 
-      <!-- deck.navigation snippet -->
-      <div aria-role="navigation">
-        <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-        <a href="#" class="deck-next-link" title="Next">&#8594;</a>
-      </div>
+    <!-- Begin extension snippets. Add or remove as needed. -->
 
-      <!-- deck.status snippet -->
-      <p class="deck-status" aria-role="status">
-        <span class="deck-status-current"></span>
-        /
-        <span class="deck-status-total"></span>
-      </p>
-
-      <!-- deck.goto snippet -->
-      <form action="." method="get" class="goto-form">
-        <label for="goto-slide">Go to slide:</label>
-        <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-        <datalist id="goto-datalist"></datalist>
-        <input type="submit" value="Go">
-      </form>
-
-      <!-- End extension snippets. -->
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
     </div>
 
-    <!-- Required JS files. -->
-    <script src="jquery.min.js"></script>
-    <script src="core/deck.core.js"></script>
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
 
-    <!-- Extension JS files. Add or remove as needed. -->
-    <script src="extensions/menu/deck.menu.js"></script>
-    <script src="extensions/goto/deck.goto.js"></script>
-    <script src="extensions/status/deck.status.js"></script>
-    <script src="extensions/navigation/deck.navigation.js"></script>
-    <script src="extensions/scale/deck.scale.js"></script>
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
 
-    <!-- Initialize the deck. You can put this in an external file if desired. -->
-    <script>
-    $(function() {
-      $.deck('.slide');
-    });
-    </script>
-  </body>
-  </html>
+    <!-- End extension snippets. -->
+  </div>
+
+  <!-- Required JS files. -->
+  <script src="jquery.min.js"></script>
+  <script src="core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="extensions/menu/deck.menu.js"></script>
+  <script src="extensions/goto/deck.goto.js"></script>
+  <script src="extensions/status/deck.status.js"></script>
+  <script src="extensions/navigation/deck.navigation.js"></script>
+  <script src="extensions/scale/deck.scale.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+  $(function() {
+    $.deck('.slide');
+  });
+  </script>
+</body>
+</html>
