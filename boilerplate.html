@@ -153,6 +153,56 @@
       </ul>
     </section>
 
+
+    <section class="slide">
+      <h2>À quoi ça sert ?</h2>
+      
+      <ul>
+        <li>Pour les possesseurs de données : d'enrichir le contenu</li>
+        <li>Pour les développeurs : alimenter des applications</li>
+      </ul>
+      <h3>Quelques exemples d'application:</h3>
+      <ul>
+        <li><a href="http://www.visualdataweb.org/relfinder.php">Relfinder</a> : modélisation des liens entre des objets</li>
+        <li><a href="http://dbpediaplaces.tk/">DBPedia Places</a> : positionne des lieux importants sur une carte</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Qu'est ce que le SPARQL?</h2>
+      
+      <ul>
+        <li>SPARQL Protocol And RDF Query Language</li>
+        <li>Langage de requête pour extraire des données RDF</li>
+        <li>Permet d'accéder aux données du Web de données</li>
+      </ul>
+      <img src="./img/sparql.PNG"/>
+   </section>
+
+   <section class="slide">
+      <h2>Comment récupérer tous les films dans lesquels a joué Brad Pitt ?</h2>
+      <img src="./img/brad.JPG"/>
+    </section>
+
+    <section class="slide">
+      <h2>Requête SPARQL</h2>
+      <code>SELECT ?titrefilm, ?resume <br>WHERE {<br>
+            ?films a &lt;http://dbpedia.org/ontology/Film&gt;.<br>
+            ?films rdfs:label ?titrefilm FILTER(lang(?titrefilm)="en").<br>
+            ?films dbpedia-owl:starring ?acteurs.<br>
+            ?acteurs rdfs:label ?nomacteur FILTER(?nomacteur="Brad Pitt"@en).<br>
+            ?films dbpedia-owl:abstract ?resume. <br>
+            FILTER langMatches(lang(?resume), "fr").<br>
+            }
+    </code><br><br>
+    <a href="http://dbpedia.org/snorql/?query=SELECT+%3Ftitrefilm%2C+%3Fresume+WHERE+%7B%0D%0A%3Ffilms+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FFilm%3E.%0D%0A%3Ffilms+rdfs%3Alabel+%3Ftitrefilm+FILTER%28lang%28%3Ftitrefilm%29%3D%22en%22%29.%0D%0A%3Ffilms+dbpedia-owl%3Astarring+%3Facteurs.%0D%0A%3Facteurs+rdfs%3Alabel+%3Fnomacteur+FILTER%28%3Fnomacteur%3D%22Brad+Pitt%22%40en%29.%0D%0A%3Ffilms+dbpedia-owl%3Aabstract+%3Fresume.+%0D%0AFILTER+langMatches%28lang%28%3Fresume%29%2C+%22fr%22%29.%0D%0A%7D">Resultat</a>
+    </section>
+
+   <section class="slide">
+      <h2>Exemple d'application avec JavaScript</h2>
+      <a class="jsbin-embed" href="http://jsbin.com/neraze/4/embed?js,output">Test de SPARQL</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    </section>
+    
     <!-- End slides. -->
 
     <!-- Begin extension snippets. Add or remove as needed. -->
