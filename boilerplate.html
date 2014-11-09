@@ -42,33 +42,32 @@
       <h2>Menu</h2>
       <ul>
         <li class="slide">
-          Le web des données : pourquoi? qu'est-ce?
+          Le web des données
         </li>
-        <li class="slide">Qu'est ce que RDF?</li>
-        <li class="slide">Qu'est ce que DBPedia?</li>
-        <li class="slide">Qu'est ce que SPARQL?</li>
+        <li class="slide">La notation RDF</li>
+        <li class="slide">DBPedia</li>
+        <li class="slide">SPARQL</li>
+        <li class="slide">Exemples</li>
       </ul>
     </section>
 
     <section class="slide">
-      <h2>Le web des données : pourquoi?</h2>
+      <h2>Le web des données</h2>
       <h3>La problématique</h3>
       <p>Vénus</p>
-      <img src="./img/venus.jpg">     
-    </section>
-
-    <section class="slide">
-      <h2>Le web des données : pourquoi?</h2>
-      <h3>La problématique</h3>
-      <p>Vénus</p>
-      <img src="./img/venusplanet.png">     
-    </section>
-
-    <section class="slide">
-      <h2>Le web des données : pourquoi?</h2>
-      <h3>La problématique</h3>
-      <p>Vénus</p>
-      <img src="./img/venuswilliams.png">     
+      <table class="slide">
+        <tr>
+          <td><img src="./img/venus.jpg" style="width:50%"></td>
+          <td><img src="./img/venuswilliams.png"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <img src="./img/venusplanet.png"  style="width:50%">
+          </td>
+        </tr>
+      </table>
+      
+           
     </section>
 
     <section class="slide">
@@ -195,7 +194,7 @@
             FILTER langMatches(lang(?resume), "fr").<br>
             }
     </code><br><br>
-    <a href="http://dbpedia.org/snorql/?query=SELECT+%3Ftitrefilm%2C+%3Fresume+WHERE+%7B%0D%0A%3Ffilms+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FFilm%3E.%0D%0A%3Ffilms+rdfs%3Alabel+%3Ftitrefilm+FILTER%28lang%28%3Ftitrefilm%29%3D%22en%22%29.%0D%0A%3Ffilms+dbpedia-owl%3Astarring+%3Facteurs.%0D%0A%3Facteurs+rdfs%3Alabel+%3Fnomacteur+FILTER%28%3Fnomacteur%3D%22Brad+Pitt%22%40en%29.%0D%0A%3Ffilms+dbpedia-owl%3Aabstract+%3Fresume.+%0D%0AFILTER+langMatches%28lang%28%3Fresume%29%2C+%22fr%22%29.%0D%0A%7D">Resultat</a>
+    <a href="http://dbpedia.org/snorql/?query=SELECT+%3Ftitrefilm%2C+%3Fresume+WHERE+%7B%0D%0A%3Ffilms+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FFilm%3E.%0D%0A%3Ffilms+rdfs%3Alabel+%3Ftitrefilm+FILTER%28lang%28%3Ftitrefilm%29%3D%22en%22%29.%0D%0A%3Ffilms+dbpedia-owl%3Astarring+%3Facteurs.%0D%0A%3Facteurs+rdfs%3Alabel+%3Fnomacteur+FILTER%28%3Fnomacteur%3D%22Brad+Pitt%22%40en%29.%0D%0A%3Ffilms+dbpedia-owl%3Aabstract+%3Fresume.+%0D%0AFILTER+langMatches%28lang%28%3Fresume%29%2C+%22fr%22%29.%0D%0A%7D" target="_blank">Resultat</a>
     </section>
 
    <section class="slide">
