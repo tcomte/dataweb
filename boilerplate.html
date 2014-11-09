@@ -194,14 +194,32 @@
             FILTER langMatches(lang(?resume), "fr").<br>
             }
     </code><br><br>
-    <a href="http://dbpedia.org/snorql/?query=SELECT+%3Ftitrefilm%2C+%3Fresume+WHERE+%7B%0D%0A%3Ffilms+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FFilm%3E.%0D%0A%3Ffilms+rdfs%3Alabel+%3Ftitrefilm+FILTER%28lang%28%3Ftitrefilm%29%3D%22en%22%29.%0D%0A%3Ffilms+dbpedia-owl%3Astarring+%3Facteurs.%0D%0A%3Facteurs+rdfs%3Alabel+%3Fnomacteur+FILTER%28%3Fnomacteur%3D%22Brad+Pitt%22%40en%29.%0D%0A%3Ffilms+dbpedia-owl%3Aabstract+%3Fresume.+%0D%0AFILTER+langMatches%28lang%28%3Fresume%29%2C+%22fr%22%29.%0D%0A%7D" target="_blank">Resultat</a>
+    <a href="http://dbpedia.org/page/Snatch_(film)">Ressource exemple</a><br><br>
+    <a href="http://dbpedia.org/snorql/?query=SELECT+%3Ftitrefilm%2C+%3Fresume+WHERE+%7B%0D%0A%3Ffilms+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FFilm%3E.%0D%0A%3Ffilms+rdfs%3Alabel+%3Ftitrefilm+FILTER%28lang%28%3Ftitrefilm%29%3D%22en%22%29.%0D%0A%3Ffilms+dbpedia-owl%3Astarring+%3Facteurs.%0D%0A%3Facteurs+rdfs%3Alabel+%3Fnomacteur+FILTER%28%3Fnomacteur%3D%22Brad+Pitt%22%40en%29.%0D%0A%3Ffilms+dbpedia-owl%3Aabstract+%3Fresume.+%0D%0AFILTER+langMatches%28lang%28%3Fresume%29%2C+%22fr%22%29.%0D%0A%7D"  target="_blank">Resultat de la requête</a>
     </section>
 
    <section class="slide">
       <h2>Exemple d'application avec JavaScript</h2>
       <a class="jsbin-embed" href="http://jsbin.com/neraze/4/embed?js,output">Test de SPARQL</a><script src="http://static.jsbin.com/js/embed.js"></script>
+      <ul>
+        <li>Sortie au format JSON puis traitement en JavaScript</li>
+   
+      </ul>
     </section>
-    
+
+   <section class="slide">
+      <h2>Quelles sont les 25 communes les plus peuplées des Alpes-Maritimes ?</h2>
+      <h3>Requête SPARQL</h3>
+      <code>SELECT ?nom_ville, ?nb_habitants <br>WHERE {<br>
+            ?ville a &lt;http://dbpedia.org/ontology/PopulatedPlace&gt;.<br>
+            ?ville dbpedia-owl:populationTotal ?nb_habitants.<br>
+            ?ville rdfs:label ?nom_ville Filter langMatches(lang(?nom_ville), "Fr").<br>  
+            ?ville dbpedia-owl:department ?dpt.<br>
+            ?dpt rdfs:label ?nom_dpt Filter(?nom_dpt='Alpes-Maritimes'@Fr)<br>
+              }<br> ORDER BY DESC(?nb_habitants ) LIMIT 25
+    </code><br><br>
+       <a href="http://dbpedia.org/snorql/?query=SELECT+%3Fnom_ville%2C+%3Fnb_habitants+WHERE+%7B%0D%0A%3Fville+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPopulatedPlace%3E.%0D%0A%3Fville+dbpedia-owl%3ApopulationTotal+%3Fnb_habitants.%0D%0A%0D%0A%3Fville+rdfs%3Alabel+%3Fnom_ville+Filter+langMatches%28lang%28%3Fnom_ville%29%2C+%22Fr%22%29%0D%0A%0D%0A%3Fville+dbpedia-owl%3Adepartment+%3Fdpt.%0D%0A%3Fdpt+rdfs%3Alabel+%3Fnom_dpt+Filter%28%3Fnom_dpt%3D%27Alpes-Maritimes%27%40Fr%29%0D%0A%7D+ORDER+BY+DESC%28%3Fnb_habitants+%29+LIMIT+25">Resultat de la requête</a>
+    </section>    
     <!-- End slides. -->
 
     <!-- Begin extension snippets. Add or remove as needed. -->
