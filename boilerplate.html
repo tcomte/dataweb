@@ -113,14 +113,21 @@
       </ul>
       <img src="./img/webv3.PNG" style="width: 30%; height: 30%"/>
     </section>
+    
+    <section class="slide">
+      <h2>Le web des données</h2>
+      <br/><p>Initiative du W3C</p><br/>
+      <p>Publication de données sur le web</p><br/>
+      <p>Réseau global d'informations</p>
+    </section>
 
     <section class="slide">
-      <h2>Le web des données : qu'est-ce?</h2>
+      <h2>Le web des données</h2>
       <img src="./img/linkedataevolve.PNG"/>
     </section>
 
     <section class="slide">
-      <h2>Le web des données : qu'est-ce?</h2>
+      <h2>Le web des données</h2>
       <img src="./img/linkedata.PNG"/>
     </section>
 
@@ -162,8 +169,8 @@
       </ul>
       <h3>Quelques exemples d'application:</h3>
       <ul>
-        <li><a href="http://www.visualdataweb.org/relfinder.php">Relfinder</a> : modélisation des liens entre des objets</li>
-        <li><a href="http://dbpediaplaces.tk/">DBPedia Places</a> : positionne des lieux importants sur une carte</li>
+        <li><a href="http://www.visualdataweb.org/relfinder.php" target="_blank">Relfinder</a> : modélisation des liens entre des objets</li>
+        <li><a href="http://dbpediaplaces.tk/" target="_blank">DBPedia Places</a> : positionne des lieux importants sur une carte</li>
       </ul>
     </section>
 
@@ -218,7 +225,7 @@
             ?dpt rdfs:label ?nom_dpt Filter(?nom_dpt='Alpes-Maritimes'@Fr)<br>
               }<br> ORDER BY DESC(?nb_habitants ) LIMIT 25
     </code><br><br>
-       <a href="http://dbpedia.org/snorql/?query=SELECT+%3Fnom_ville%2C+%3Fnb_habitants+WHERE+%7B%0D%0A%3Fville+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPopulatedPlace%3E.%0D%0A%3Fville+dbpedia-owl%3ApopulationTotal+%3Fnb_habitants.%0D%0A%0D%0A%3Fville+rdfs%3Alabel+%3Fnom_ville+Filter+langMatches%28lang%28%3Fnom_ville%29%2C+%22Fr%22%29%0D%0A%0D%0A%3Fville+dbpedia-owl%3Adepartment+%3Fdpt.%0D%0A%3Fdpt+rdfs%3Alabel+%3Fnom_dpt+Filter%28%3Fnom_dpt%3D%27Alpes-Maritimes%27%40Fr%29%0D%0A%7D+ORDER+BY+DESC%28%3Fnb_habitants+%29+LIMIT+25">Resultat de la requête</a>
+       <a href="http://dbpedia.org/snorql/?query=SELECT+%3Fnom_ville%2C+%3Fnb_habitants+WHERE+%7B%0D%0A%3Fville+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPopulatedPlace%3E.%0D%0A%3Fville+dbpedia-owl%3ApopulationTotal+%3Fnb_habitants.%0D%0A%0D%0A%3Fville+rdfs%3Alabel+%3Fnom_ville+Filter+langMatches%28lang%28%3Fnom_ville%29%2C+%22Fr%22%29%0D%0A%0D%0A%3Fville+dbpedia-owl%3Adepartment+%3Fdpt.%0D%0A%3Fdpt+rdfs%3Alabel+%3Fnom_dpt+Filter%28%3Fnom_dpt%3D%27Alpes-Maritimes%27%40Fr%29%0D%0A%7D+ORDER+BY+DESC%28%3Fnb_habitants+%29+LIMIT+25" target="_blank">Resultat de la requête</a>
     </section>    
     <!-- End slides. -->
 
