@@ -74,7 +74,9 @@
       <h2>Le web des données : pourquoi?</h2>
       <h3>La solution</h3>
       <p style="padding-left:30%">Vénus</p>
-      <ul style="padding-left:30%"><li>Tableau</li><li>Tennis</li><li>Planête</li><li>...</li></ul>   
+      <ul style="padding-left:30%"><li>Tableau</li><li>Tennis</li><li>Planête</li><li>...</li></ul>
+      <br/>
+      <p style="padding-left:30%">--> Web des Données <--</p>
     </section>
 
     <section class="slide">
@@ -227,6 +229,18 @@
     </code><br><br>
        <a href="http://dbpedia.org/snorql/?query=SELECT+%3Fnom_ville%2C+%3Fnb_habitants+WHERE+%7B%0D%0A%3Fville+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPopulatedPlace%3E.%0D%0A%3Fville+dbpedia-owl%3ApopulationTotal+%3Fnb_habitants.%0D%0A%0D%0A%3Fville+rdfs%3Alabel+%3Fnom_ville+Filter+langMatches%28lang%28%3Fnom_ville%29%2C+%22Fr%22%29%0D%0A%0D%0A%3Fville+dbpedia-owl%3Adepartment+%3Fdpt.%0D%0A%3Fdpt+rdfs%3Alabel+%3Fnom_dpt+Filter%28%3Fnom_dpt%3D%27Alpes-Maritimes%27%40Fr%29%0D%0A%7D+ORDER+BY+DESC%28%3Fnb_habitants+%29+LIMIT+25" target="_blank">Resultat de la requête</a>
     </section>    
+
+    <section class="slide">
+      <h2>Conclusion</h2>
+      <p>Objectif : Réseau d'informations</p>
+      <p>Adaptable aux grandes entreprises?</p>
+      <ul>
+        <li>Valeur des données</li>
+        <li>Sécurité</li>
+        <li>Envie?</li>
+        <li>...</li>
+      </ul>
+    </section>
     <!-- End slides. -->
 
     <!-- Begin extension snippets. Add or remove as needed. -->
